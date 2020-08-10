@@ -19,7 +19,7 @@ class Title extends Widget_Base
 	}
 	public function get_categories()
 	{
-		return [ 'custom-general' ];
+		return [ 'basic' ];
 	}
 	protected function _register_controls()
 	{

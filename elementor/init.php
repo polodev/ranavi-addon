@@ -51,6 +51,7 @@ class ElementorInit
   {
     $plugin_prefix = Constants::$plugin_prefix;
     wp_register_script( $plugin_prefix . '-frontend', Helpers::get_asset_file( 'js/script.js'  ), ['jquery'], false, true );
+    wp_enqueue_script('clenoz-frontend', plugins_url('/assets/js/frontend.js', __FILE__), ['jquery'], false, true);
   }
   public function styles_for_elementor()
   {

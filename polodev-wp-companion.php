@@ -49,7 +49,7 @@ class Polodev_Wp_Companion {
 }
 
 function polodev_wp_companion_admin_notice() {
-  $msg = sprintf( esc_html__( 'Error: Your current PHP version is %1$s. You need at least PHP version 5.3+" to work. Please ask your hosting provider to upgrade your PHP version into 5.3+', 'koncrete-core' ), PHP_VERSION );
+  $msg = sprintf( esc_html__( 'Error: Your current PHP version is %1$s. You need at least PHP version 5.3+" to work. Please ask your hosting provider to upgrade your PHP version into 5.3+', 'polodev-wp-companion' ), PHP_VERSION );
   echo '<div class="error"><p>' . $msg . '</p></div>';
 }
 

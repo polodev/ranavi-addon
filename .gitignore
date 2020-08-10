@@ -1,0 +1,7 @@
+sftp-config.json
+polodev-wp-companion.zip
+mix-manifest.json
+node_modules/
+package-lock.json
+*.php_cs.cache
+
