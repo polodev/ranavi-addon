@@ -1,7 +1,6 @@
 <?php
 namespace ibauthor\Polodev_WP_Companion;
 
-use Elementor\Plugin;
 class ElementorInit
 {
 	private static $_instance = null;
@@ -24,24 +23,24 @@ class ElementorInit
   public function get_widget_list() {
      $widget_list = [
       [
-          'file' => 'title.php',
+          'folder' => 'title',
           'class' => 'Title',
       ],
       [
-          'file' => 'title2.php',
+          'folder' => 'title2',
           'class' => 'Title2',
       ],
     ];
     return $widget_list;
   }
   public function register_widgets() {
-    $widgets_manager = Plugin::instance()->widgets_manager; 
+    $widgets_manager = \Elementor\Plugin::instance()->widgets_manager; 
     $widget_list = $this->get_widget_list();
 
     foreach ($widget_list as $widget) {
-      $file =  Constants::$plugin_elementor_widgets_dir . $widget['file'] ;
+      $file =  Constants::$plugin_elementor_widgets_dir . $widget['folder'] . '/class.php';
       if ( file_exists($file) ) {
-        require Constants::$plugin_elementor_widgets_dir . $widget['file'] ;
+        require $file ;
         $class_name_with_namespace = Constants::$plugin_namespace . $widget['class'];
         $widgets_manager->register_widget_type( new $class_name_with_namespace() );
       }
@@ -51,7 +50,6 @@ class ElementorInit
   {
     $plugin_prefix = Constants::$plugin_prefix;
     wp_register_script( $plugin_prefix . '-frontend', Helpers::get_asset_file( 'js/script.js'  ), ['jquery'], false, true );
-    wp_enqueue_script('clenoz-frontend', plugins_url('/assets/js/frontend.js', __FILE__), ['jquery'], false, true);
   }
   public function styles_for_elementor()
   {

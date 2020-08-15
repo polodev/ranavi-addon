@@ -31,6 +31,7 @@ class Polodev_Wp_Companion {
     require $this->plugin_dir . '/inc/constants.php';
     require $this->plugin_dir . '/inc/helpers.php';
     require $this->plugin_dir . '/inc/scripts.php';
+    require $this->plugin_dir . '/inc/elementor_helper_trait.php';
   }
 
 
