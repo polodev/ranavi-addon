@@ -49,12 +49,12 @@ class ElementorInit
   public function scripts_for_elementor()
   {
     $plugin_prefix = Constants::$plugin_prefix;
-    wp_register_script( $plugin_prefix . '-frontend', Helpers::get_asset_file( 'js/script.js'  ), ['jquery'], false, true );
+    // wp_register_script( $plugin_prefix . '-frontend', Helpers::get_asset_file( 'js/script.js'  ), ['jquery'], false, true );
   }
   public function styles_for_elementor()
   {
     $plugin_prefix = Constants::$plugin_prefix;
-    wp_enqueue_style( $plugin_prefix . '-styles', Helpers::get_asset_file( 'css/style.css' ));
+    // wp_enqueue_style( $plugin_prefix . '-styles', Helpers::get_asset_file( 'css/style.css' ));
   }
 	
 }
