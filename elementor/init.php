@@ -27,8 +27,8 @@ class ElementorInit
           'class' => 'Title',
       ],
       [
-          'folder' => 'title2',
-          'class' => 'Title2',
+          'folder' => 'celebrity_talk',
+          'class' => 'CelebrityTalk',
       ],
     ];
     return $widget_list;

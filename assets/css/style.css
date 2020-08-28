@@ -1,5 +1,266 @@
-body {
-  background: red;
-  color: #444;
-  font-size: 25px;
+body{
+    font-family: "Poppins" , sans-serif;
+    color: #080320;
+}
+.celebrity-talk-box{
+    background-image: url(images/celeb-talk-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.celeb-image-wrap{
+    position: relative;
+    min-height: 450px;
+}
+.celeb-photo-box-red{
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 0.25rem;
+    background: #ff3f62;
+    z-index: 1;
+    transform: translate(-50px, 50px);
+}
+.celeb-photo-box-blue{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #00fde3;
+    left: 0px;
+    bottom: 0px;
+    z-index: 3;
+    transform: translate(-75px, -5px);
+    border-radius: 0.25rem;
+}
+button.link-black{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+#celeb-talk-anim{
+    position: relative;
+    width: 540px;
+    height: 540px;
+    background-image: url(../images/celebrity_talk.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+    margin: auto;
+    overflow: visible;
+}
+.img-celeb-anim{
+    position: absolute;
+    cursor: pointer;
+}
+.product{
+    background: #fffcec;
+}
+.product-title{
+    color: #ff002b;
+}
+.product-param{
+    color: #005c9a;
+}
+.btn-product{
+    background: #0ECC00;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+}
+.btn-product:hover{
+    color: #fff;
+    opacity: 0.8;
+}
+@keyframes celebAnimPosOne{
+    0%{
+        left: 330px;
+        top: 20px;
+    }
+    20%{
+        left: 380px;
+        top: 290px;
+    }
+    40%{
+        left: 210px;
+        top: 400px;
+    }
+    60%{
+        left: 50px;
+        top: 320px;
+    }
+    80%{
+        left: 60px;
+        top: 100px;
+    }
+    100%{
+        left: 330px;
+        top: 20px;
+    }
+}
+@keyframes celebAnimPosTwo{
+    0%{
+        left: 380px;
+        top: 290px;
+    }
+    20%{
+        left: 210px;
+        top: 400px;
+    }
+    40%{
+        left: 50px;
+        top: 320px;
+    }
+    60%{
+        left: 60px;
+        top: 100px;
+    }
+    80%{
+        left: 330px;
+        top: 20px;
+    }
+    100%{
+        left: 380px;
+        top: 290px;
+    }
+}
+@keyframes celebAnimPosThree{
+    0%{
+        left: 210px;
+        top: 400px;
+    }
+    20%{
+        left: 50px;
+        top: 320px;
+    }
+    40%{
+        left: 60px;
+        top: 100px;
+    }
+    60%{
+        left: 330px;
+        top: 20px;
+    }
+    80%{
+        left: 380px;
+        top: 290px;
+    }
+    100%{
+        left: 210px;
+        top: 400px;
+    }
+}
+@keyframes celebAnimPosFour{
+    0%{
+        left: 50px;
+        top: 320px;
+    }
+    20%{
+        left: 60px;
+        top: 100px;
+    }
+    40%{
+        left: 330px;
+        top: 20px;
+    }
+    60%{
+        left: 380px;
+        top: 290px;
+    }
+    80%{
+        left: 210px;
+        top: 400px;
+    }
+    100%{
+        left: 50px;
+        top: 320px;
+    }
+}
+@keyframes celebAnimPosFive{
+    0%{
+        left: 60px;
+        top: 100px;
+    }
+    20%{
+        left: 330px;
+        top: 20px;
+    }
+    40%{
+        left: 380px;
+        top: 290px;
+    }
+    60%{
+        left: 210px;
+        top: 400px;
+    }
+    80%{
+        left: 50px;
+        top: 320px;
+    }
+    100%{
+        left: 60px;
+        top: 100px;
+    }
+}
+.celeb-anim-pos-1{
+    left: 330px;
+    top: 20px;
+    animation-name: celebAnimPosOne;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.celeb-anim-pos-2{
+    left: 380px;
+    top: 290px;
+    animation-name: celebAnimPosTwo;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.celeb-anim-pos-3{
+    left: 210px;
+    top: 400px;
+    animation-name: celebAnimPosThree;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.celeb-anim-pos-4{
+    left: 50px;
+    top: 320px;
+    animation-name: celebAnimPosFour;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.celeb-anim-pos-5{
+    left: 60px;
+    top: 100px;
+    animation-name: celebAnimPosFive;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.celeb-photo-box-orange{
+    position: absolute;
+    width: calc(100% + 20px);
+    height: 150px;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 0.25rem;
+    background: #ff6a29;
+    transform: translate(-100px, 80px);
+}
+.card-pink{
+    background-color: #fff5f5;
+    border: 1px solid #efe5e5;
+}
+
+@media (min-width: 1200px){
+    .celeb-image-wrap{
+        min-height: 378px;
+    }
+}
+@media (min-width: 1600px){
+    .celeb-image-wrap{
+        min-height: 450px;
+    }
 }
