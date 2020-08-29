@@ -26,6 +26,7 @@ class Scripts {
   public function plugin_styles()
   {
     $plugin_prefix = Constants::$plugin_prefix;
+    wp_enqueue_style( 'font-awesome-4', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style( 'animate', Helpers::get_asset_file( 'css/animate.css' ));
     wp_enqueue_style( 'bootstrap', Helpers::get_asset_file( 'css/bootstrap.min.css' ));
     wp_enqueue_style( $plugin_prefix . '-styles', Helpers::get_asset_file( 'css/style.css' ));

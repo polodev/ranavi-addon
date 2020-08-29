@@ -48,8 +48,75 @@ class CelebrityTalk extends Widget_Base
         'default' => __( 'CELEBRITY', 'polodev-wp-companion' ),
       ]
     );
+    $this->add_control(
+      'image',
+      [
+        'label' => __( 'Choose Image', 'plugin-domain' ),
+        'type' => \Elementor\Controls_Manager::MEDIA,
+        'default' => [
+          'url' => Helpers::get_asset_file('images/celebrity_talk.png')
+        ],
+      ]
+    );
+    
     $this->end_controls_section();
+
+
+    /**
+     * background block start
+     */
+    $this->start_controls_section(
+      'backgroun_block',
+      [
+        'label' => __( 'Background Area', 'polodev-wp-companion' ),
+        'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+      ]
+    );
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'celeb_background',
+        'label' => __( 'Celeb Talk Background', 'polodev-wp-companion' ),
+        'types' => [ 'classic', 'gradient', 'video' ],
+        'fields_options'  => array(
+          'background' => array(
+            'label' => esc_html__( 'CelebrityTalk Background', 'polodev-wp-companion' ),
+          ),
+          'image' =>[ 
+            'default' => [
+              'url' => Helpers::get_asset_file('images/celeb-talk-bg.png')
+            ],
+          ],
+        ),
+        'selector' => '{{WRAPPER}} .celebrity-talk-box',
+      ]
+    );
+    
+    $this->add_group_control(
+      \Elementor\Group_Control_Background::get_type(),
+      [
+        'name' => 'celeb_animation_background',
+        'label' => __( 'Celeb Talk Animation Background', 'polodev-wp-companion' ),
+        'types' => [ 'classic', 'gradient', 'video' ],
+        'selector' => '{{WRAPPER}} #celeb-talk-anim',
+        'fields_options'  => array(
+          'background' => array(
+            'label' => esc_html__( 'CelebrityTalk Animation Background', 'polodev-wp-companion' ),
+          ),
+          'image' => [
+            'default' => [
+              'url' => Helpers::get_asset_file('images/celebrity_talk.png')
+            ],
+          ],
+        ),
+      ]
+    );
+    
+    $this->end_controls_section();
+    
   }
+
+
 
   protected function render()
   {

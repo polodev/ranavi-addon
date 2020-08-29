@@ -2,10 +2,6 @@
 namespace ibauthor\Polodev_WP_Companion;
 extract( $settings );
 ?>
-<?php 
-namespace ibauthor\Polodev_WP_Companion;
-extract( $settings );
-?>
 
 <section class="container-fluid no-gutters celebrity-talk-box">
   <div class="container">

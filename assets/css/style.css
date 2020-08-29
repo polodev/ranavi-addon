@@ -3,7 +3,7 @@ body{
     color: #080320;
 }
 .celebrity-talk-box{
-    background-image: url(images/celeb-talk-bg.png);
+    /*background-image: url(images/celeb-talk-bg.png);*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +43,7 @@ button.link-black{
     position: relative;
     width: 540px;
     height: 540px;
-    background-image: url(../images/celebrity_talk.png);
+    /*background-image: url(../images/celebrity_talk.png);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center, center;
