@@ -61,18 +61,18 @@ class CelebrityTalk extends Widget_Base
     
     $this->end_controls_section();
 
-
     /**
-     * background block start
+     * celebrity-talk background
      */
-    $this->start_controls_section(
-      'backgroun_block',
+    $this->start_controls_section (
+      'celebrity_talk_background_section',
       [
-        'label' => __( 'Background Area', 'polodev-wp-companion' ),
+        'label' => __( 'Celeb Talk Background', 'polodev-wp-companion' ),
         'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
       ]
     );
-    $this->add_group_control(
+
+   $this->add_group_control(
       \Elementor\Group_Control_Background::get_type(),
       [
         'name' => 'celeb_background',
@@ -90,7 +90,22 @@ class CelebrityTalk extends Widget_Base
         ),
         'selector' => '{{WRAPPER}} .celebrity-talk-box',
       ]
+    ); 
+
+    $this->end_controls_section();
+    
+
+    /**
+     * background block start
+     */
+    $this->start_controls_section(
+      'celeb_animation_background_section',
+      [
+        'label' => __( 'Celeb Talk Animation Background', 'polodev-wp-companion' ),
+        'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+      ]
     );
+    
     
     $this->add_group_control(
       \Elementor\Group_Control_Background::get_type(),
