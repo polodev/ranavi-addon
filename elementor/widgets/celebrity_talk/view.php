@@ -7,8 +7,8 @@ extract( $settings );
   <div class="container">
       <div class="row">
           <div class="col-12 text-center">
-              <h5 class="text-orange mt-0 mt-md-5">CELEBRITY</h5>
-              <h1 class="about-title mb-5">Talks About Us</h1>
+              <h5 class="text-orange mt-0 mt-md-5"><?php echo esc_html( $title ); ?></h5>
+              <h1 class="about-title mb-5"><?php echo esc_html( $subtitle ); ?></h1>
           </div>
       </div>
       <div class="row mb-5">

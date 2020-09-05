@@ -48,13 +48,110 @@ class CelebrityTalk extends Widget_Base
         'default' => __( 'CELEBRITY', 'polodev-wp-companion' ),
       ]
     );
-    $this->add_control(
-      'image',
-      [
-        'label' => __( 'Choose Image', 'plugin-domain' ),
+
+    $repeater = new \Elementor\Repeater();
+    $repeater->add_control(
+      'name', [
+        'label' => __( 'Name', 'polodev-wp-companion' ),
+        'type' => \Elementor\Controls_Manager::TEXT,
+        'label_block' => true,
+      ]
+    );
+    
+    $repeater->add_control(
+      'photo', [
+        'label' => __( 'Celebrity Photo', 'polodev-wp-companion' ),
         'type' => \Elementor\Controls_Manager::MEDIA,
         'default' => [
-          'url' => Helpers::get_asset_file('images/celebrity_talk.png')
+          'url' => \Elementor\Utils::get_placeholder_image_src(),
+        ],
+      ]
+    );
+    $repeater->add_control(
+      'thumbnail', [
+        'label' => __( 'Celebrity Photo Thumbnail', 'polodev-wp-companion' ),
+        'type' => \Elementor\Controls_Manager::MEDIA,
+        'default' => [
+          'url' => \Elementor\Utils::get_placeholder_image_src(),
+        ],
+      ]
+    );
+    $repeater->add_control(
+      'profession', [
+        'label' => __( 'Profession', 'polodev-wp-companion' ),
+        'type' => \Elementor\Controls_Manager::TEXT,
+        'label_block' => true,
+      ]
+    );
+    $repeater->add_control(
+      'comment', [
+        'label' => __( 'Comment', 'polodev-wp-companion' ),
+        'type' => \Elementor\Controls_Manager::TEXTAREA,
+        'label_block' => true,
+      ]
+    );
+    $this->add_control(
+      'celeb_talks',
+      [
+        'label' => __( 'Repeater List', 'polodev-wp-companion' ),
+        'type' => \Elementor\Controls_Manager::REPEATER,
+        'fields' => $repeater->get_controls(),
+        'default' => [
+          [
+            "name" => "Ferdous Ahmed",
+            "photo" => [
+              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+            ],
+            "thumbnail" => [
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+            ],
+            "profession" => "Actor",
+            "comment" => "<small>Thank You!<br>Eagles Dance Company.<br>Great Experience With You. Best Wishes.</small>"
+          ],
+          [
+            "name" => "Dilara Hanif Purnima",
+            "photo" => [
+              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+            ],
+            "thumbnail" => [
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+            ],
+            "profession" => "Actor",
+            "comment" => "<small>Great Experience!<br>Great Work Ethics.<br>Love To Work With Again And Again.</small>"
+          ],
+          [
+            "name" => "Shakib Khan",
+            "photo" => [
+              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+            ],
+            "thumbnail" => [
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+            ],
+            "profession" => "Actor",
+            "comment" => "<small>Very Professional!<br>Had Fun Working With You.<br>Looking Forword To Work With You Again.</small>"
+          ],
+          [
+            "name" => "Mehazabien Chowdhury",
+            "photo" => [
+              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+            ],
+            "thumbnail" => [
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+            ],
+            "profession" => "Actor",
+            "comment" => "<small>One Of The Best Place To Work!<br>Nice Studio And Best People.<br>Best Wishes To You.</small>"
+          ],
+          [
+            "name" => "Bidya Sinha Saha Mim",
+            "photo" => [
+              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+            ],
+            "thumbnail" => [
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+            ],
+            "profession" => "Actor",
+            "comment" => "<small>Best Experience!<br>A Team Of Very Good Dancers.<br>We Expect Many Great Things In The Future.</small>"
+          ],
         ],
       ]
     );
@@ -94,7 +191,6 @@ class CelebrityTalk extends Widget_Base
 
     $this->end_controls_section();
     
-
     /**
      * background block start
      */
