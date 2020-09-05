@@ -111,10 +111,10 @@ class CelebrityTalk extends Widget_Base
           [
             "name" => "Dilara Hanif Purnima",
             "photo" => [
-              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+              'url' => Helpers::get_asset_file('images/celebrity-full/purnima.png'),
             ],
             "thumbnail" => [
-              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/purnima.png'),
             ],
             "profession" => "Actor",
             "comment" => "<small>Great Experience!<br>Great Work Ethics.<br>Love To Work With Again And Again.</small>"
@@ -122,10 +122,10 @@ class CelebrityTalk extends Widget_Base
           [
             "name" => "Shakib Khan",
             "photo" => [
-              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+              'url' => Helpers::get_asset_file('images/celebrity-full/shakib.png'),
             ],
             "thumbnail" => [
-              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/shakib.png'),
             ],
             "profession" => "Actor",
             "comment" => "<small>Very Professional!<br>Had Fun Working With You.<br>Looking Forword To Work With You Again.</small>"
@@ -133,10 +133,10 @@ class CelebrityTalk extends Widget_Base
           [
             "name" => "Mehazabien Chowdhury",
             "photo" => [
-              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+              'url' => Helpers::get_asset_file('images/celebrity-full/mehjabin.png'),
             ],
             "thumbnail" => [
-              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/mehjabin.png'),
             ],
             "profession" => "Actor",
             "comment" => "<small>One Of The Best Place To Work!<br>Nice Studio And Best People.<br>Best Wishes To You.</small>"
@@ -144,10 +144,10 @@ class CelebrityTalk extends Widget_Base
           [
             "name" => "Bidya Sinha Saha Mim",
             "photo" => [
-              'url' => Helpers::get_asset_file('images/celebrity-full/ferdous.png'),
+              'url' => Helpers::get_asset_file('images/celebrity-full/bidya.png'),
             ],
             "thumbnail" => [
-              'url' => Helpers::get_asset_file('images/celebrity-thumb/ferdous.png'),
+              'url' => Helpers::get_asset_file('images/celebrity-thumb/bidya.png'),
             ],
             "profession" => "Actor",
             "comment" => "<small>Best Experience!<br>A Team Of Very Good Dancers.<br>We Expect Many Great Things In The Future.</small>"
@@ -181,7 +181,7 @@ class CelebrityTalk extends Widget_Base
           ),
           'image' =>[ 
             'default' => [
-              'url' => Helpers::get_asset_file('images/celeb-talk-bg.png')
+              'url' => Helpers::get_asset_file('images/celeb_talk_bg.png')
             ],
           ],
         ),
